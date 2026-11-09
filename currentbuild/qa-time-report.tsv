@@ -1,15 +1,15 @@
 Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/fsh-generated/resources/ImplementationGuide-no.vidarure.fhir.lab-ig.json	2630	-	0	0	0	0	0	0	12	78	0	0	0	0	0	0	0	0	0	0	38	40	0	0	0	1	0	2
-fsh-generated/resources/Observation-Blodtrykk-1.json	1045	3	0	0	2	0	0	0	0	515	0	0	0	0	0	0	0	0	0	0	6	16	0	0	1	0	0	0
-fsh-generated/resources/Patient-Pasient-1.json	1185	2	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	4	12	0	0	0	0	0	0
-fsh-generated/resources/StructureDefinition-mal-observation-blodtrykk.json	5879	5	0	73	0	0	0	0	0	269	0	0	1	0	0	0	0	2	0	0	88	1607	0	1	0	14	1	5
-fsh-generated/resources/StructureDefinition-mal-patient.json	824	2	0	81	0	0	0	0	0	46	0	0	0	0	0	0	0	1	0	0	72	766	0	0	0	11	0	6
+/fsh-generated/resources/ImplementationGuide-no.vidarure.fhir.lab-ig.json	2630	-	0	0	0	0	0	0	11	52	0	0	0	0	0	0	0	0	0	0	35	38	0	0	0	1	0	3
+fsh-generated/resources/Observation-Blodtrykk-1.json	1572	5	0	0	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	5	13	0	0	0	0	0	0
+fsh-generated/resources/Patient-Pasient-1.json	1185	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	9	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-mal-observation-blodtrykk.json	6766	5	0	78	1	0	0	0	1	341	0	0	1	0	0	0	0	2	0	0	97	1617	0	0	0	20	0	5
+fsh-generated/resources/StructureDefinition-mal-patient.json	824	1	0	75	0	0	0	0	0	32	0	0	0	0	0	0	0	2	0	0	76	734	0	0	0	12	1	2
 /fsh-generated/includes/fsh-link-references.md	212	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
 /fsh-generated/includes/menu.xml	1089	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/pagecontent/index.md	1058	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/index.md	1058	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 /template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 /input/images	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 /input/images/test.svg	8294	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-/input/images/test.puml	389	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
-/temp/pages/_includes/artifacts.xml	2816	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	0	0	0	0	0	0	0
+/input/images/test.puml	389	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	2816	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	1	0	0	0	0	0	0

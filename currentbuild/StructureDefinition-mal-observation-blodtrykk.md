@@ -100,6 +100,20 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "path" : "Observation"
     },
     {
+      "id" : "Observation.category",
+      "path" : "Observation.category",
+      "min" : 1,
+      "max" : "1",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      },
+      "mustSupport" : true
+    },
+    {
       "id" : "Observation.code",
       "path" : "Observation.code",
       "patternCodeableConcept" : {
@@ -209,9 +223,16 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "mustSupport" : true
     },
     {
+      "id" : "Observation.component:systolisk.value[x]:valueQuantity.unit",
+      "path" : "Observation.component.value[x].unit",
+      "min" : 1,
+      "patternString" : "mmHg",
+      "mustSupport" : true
+    },
+    {
       "id" : "Observation.component:systolisk.value[x]:valueQuantity.system",
       "path" : "Observation.component.value[x].system",
-      "patternUri" : "http://unitsofmeasure.org."
+      "patternUri" : "http://unitsofmeasure.org"
     },
     {
       "id" : "Observation.component:systolisk.value[x]:valueQuantity.code",
@@ -267,9 +288,16 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "mustSupport" : true
     },
     {
+      "id" : "Observation.component:diastolisk.value[x]:valueQuantity.unit",
+      "path" : "Observation.component.value[x].unit",
+      "min" : 1,
+      "patternString" : "mmHg",
+      "mustSupport" : true
+    },
+    {
       "id" : "Observation.component:diastolisk.value[x]:valueQuantity.system",
       "path" : "Observation.component.value[x].system",
-      "patternUri" : "http://unitsofmeasure.org."
+      "patternUri" : "http://unitsofmeasure.org"
     },
     {
       "id" : "Observation.component:diastolisk.value[x]:valueQuantity.code",

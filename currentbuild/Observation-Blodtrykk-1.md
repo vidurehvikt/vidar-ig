@@ -6,19 +6,15 @@
 
 ## Example Observation: Blodtrykk-1
 
-Profile: [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
+**Blodtrykk**
 
-**status**: Final
+Pasient: Pasient-1
 
-**code**: Blood pressure panel with all children optional
+Tidspunkt: 09.11.2026 08:30
 
-**subject**: [Vidar Hartveit Ure Male, DoB: 1994-03-31 ( urn:oid:2.16.578.1.12.4.1.4.1#Foedselsnummer#31039453453)](Patient-Pasient-1.md)
+Systolisk: 120 mmHg
 
-**effective**: 2026-11-09 08:30:00+0100
-
-> **component****code**: Systolic blood pressure**value**: 120(unit mm[Hg] from http://unitsofmeasure.org.) (Details: unitsofmeasure.org. codemm[Hg] = 'mm[Hg]')
-
-> **component****code**: Diastolic blood pressure**value**: 78(unit mm[Hg] from http://unitsofmeasure.org.) (Details: unitsofmeasure.org. codemm[Hg] = 'mm[Hg]')
+Diastolisk: 78 mmHg
 
 
 
@@ -32,6 +28,13 @@ Profile: [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
     "profile" : ["https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk"]
   },
   "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs",
+      "display" : "Vital Signs"
+    }]
+  }],
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
@@ -51,7 +54,8 @@ Profile: [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
     },
     "valueQuantity" : {
       "value" : 120,
-      "system" : "http://unitsofmeasure.org.",
+      "unit" : "mmHg",
+      "system" : "http://unitsofmeasure.org",
       "code" : "mm[Hg]"
     }
   },
@@ -64,7 +68,8 @@ Profile: [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
     },
     "valueQuantity" : {
       "value" : 78,
-      "system" : "http://unitsofmeasure.org.",
+      "unit" : "mmHg",
+      "system" : "http://unitsofmeasure.org",
       "code" : "mm[Hg]"
     }
   }]
