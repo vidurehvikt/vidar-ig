@@ -9,9 +9,6 @@ Description: "Profil for standardisert registrering og utveksling av blodtrykk"
 
 * status 1..1 MS
 * category 1..* MS
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
 * category contains vitalSigns 1..1 MS
 * category[vitalSigns] = $observation-category#vital-signs "Vital Signs"
 
