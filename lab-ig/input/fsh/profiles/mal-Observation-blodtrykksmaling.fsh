@@ -17,10 +17,10 @@ Description: "Enkel profil for blodtrykksmåling"
 	systolisk 1..1 and
 	diastolisk 1..1
 
-* component[systolisk].code = $LNC#8480-6 // Systolisk blodtrykk
+* component[systolisk].code = $loinc#8480-6 // Systolisk blodtrykk
 * component[systolisk].valueQuantity 1..1 MS
 * component[systolisk].valueQuantity.code = $ucum#mm[Hg]
 
-* component[diastolisk].code = $LNC#8462-4 // Diastolisk blodtrykk
+* component[diastolisk].code = $loinc#8462-4 // Diastolisk blodtrykk
 * component[diastolisk].valueQuantity 1..1 MS
 * component[diastolisk].valueQuantity.code = $ucum#mm[Hg]
