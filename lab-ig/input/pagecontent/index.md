@@ -42,4 +42,10 @@ Det finnes eksempelinstanser for alle sentrale ressurser:
 
 Eksemplene kan brukes som utgangspunkt for egne profiler og instanser i samme domene.
 
+### Diagram
+
+Oversikt over sammenhengen mellom pasient, konsultasjon og blodtrykksmaling:
+
+<img src="test.svg" width="70%" />
+
 
