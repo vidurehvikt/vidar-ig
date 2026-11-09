@@ -38,12 +38,14 @@ Description: "Enkel profil for blodtrykksmåling"
 * component[diastolisk].valueQuantity.system = $ucum
 * component[diastolisk].valueQuantity.code = #mm[Hg]
 
-// Eksempel
+// Eksempel på blodtrykksmåling med systolisk/diastolisk verdi
 
 Instance: Blodtrykk-1
 InstanceOf: MalObservationBloodPressure
 Description: "Eksempel på blodtrykksmåling"
 * status = #final
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Blodtrykk</strong></p><p>Pasient: Pasient-1</p><p>Tidspunkt: 09.11.2026 08:30</p><p>Systolisk: 120 mmHg</p><p>Diastolisk: 78 mmHg</p></div>"
 * code = $loinc#85354-9
 * subject = Reference(Pasient-1)
 * effectiveDateTime = "2026-11-09T08:30:00+01:00"
