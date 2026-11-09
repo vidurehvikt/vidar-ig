@@ -198,49 +198,69 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#tittel" id="markdown-toc-tittel">Tittel</a></li>
-  <li><a href="#mål" id="markdown-toc-mål">Mål</a></li>
-  <li><a href="#omfang" id="markdown-toc-omfang">Omfang</a></li>
-  <li><a href="#brukstilfeller" id="markdown-toc-brukstilfeller">Brukstilfeller</a></li>
-  <li><a href="#figur" id="markdown-toc-figur">Figur</a></li>
+  <li><a href="#vidar-ig" id="markdown-toc-vidar-ig">Vidar IG</a></li>
+  <li><a href="#mal" id="markdown-toc-mal">Mal</a></li>
+  <li><a href="#innhold" id="markdown-toc-innhold">Innhold</a></li>
+  <li><a href="#hva-blodtrykksprofilen-krever" id="markdown-toc-hva-blodtrykksprofilen-krever">Hva blodtrykksprofilen krever</a></li>
+  <li><a href="#eksempler" id="markdown-toc-eksempler">Eksempler</a></li>
+  <li><a href="#bruk" id="markdown-toc-bruk">Bruk</a></li>
 </ul>
 
 </div>
-<h3 id="tittel">Tittel</h3>
+<h3 id="vidar-ig">Vidar IG</h3>
 
-<p>Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)</p>
+<p>Denne implementasjonsguiden viser et enkelt eksempel pa modellering av blodtrykksmaling i FHIR.</p>
 
-<h3 id="mål">Mål</h3>
+<h3 id="mal">Mal</h3>
 
-<p>Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.</p>
-
-<h3 id="omfang">Omfang</h3>
-
-<p>Denne implementasjonsguiden dekker følgende områder:</p>
+<p>Formalet er a beskrive en liten, tydelig informasjonsmodell for:</p>
 
 <ul>
-  <li>Pasientadministrasjon</li>
-  <li>Kliniske observasjoner</li>
-  <li>Medisinsk historikk</li>
-  <li>Behandlingsplaner</li>
-  <li>Laboratorieresultater</li>
+  <li>pasienten som malingen gjelder</li>
+  <li>konsultasjonen der malingen ble gjort</li>
+  <li>selve blodtrykksmalingen med systolisk og diastolisk verdi</li>
 </ul>
 
-<h3 id="brukstilfeller">Brukstilfeller</h3>
+<h3 id="innhold">Innhold</h3>
 
-<h4 id="pasientregistrering">Pasientregistrering</h4>
+<p>Guiden inneholder for tiden disse profilene:</p>
 
-<p>Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR <code class="language-plaintext highlighter-rouge">Patient</code>-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.</p>
+<ul>
+  <li>MalPatient</li>
+  <li>MalEncounterConsultation</li>
+  <li>MalObservationBloodPressure</li>
+</ul>
 
-<h4 id="kliniske-observasjoner">Kliniske observasjoner</h4>
+<h3 id="hva-blodtrykksprofilen-krever">Hva blodtrykksprofilen krever</h3>
 
-<p>Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR <code class="language-plaintext highlighter-rouge">Observation</code>-ressursen.</p>
+<p>Blodtrykksprofilen er en forenklet Observation-profil med:</p>
 
-<h3 id="figur">Figur</h3>
+<ul>
+  <li>kategori satt til vital signs</li>
+  <li>kode satt til LOINC blodtrykkspanel (85354-9)</li>
+  <li>to obligatoriske komponenter:
+    <ul>
+      <li>systolisk blodtrykk (8480-6)</li>
+      <li>diastolisk blodtrykk (8462-4)</li>
+    </ul>
+  </li>
+  <li>verdier i enheten mmHg</li>
+  <li>kobling til pasient og konsultasjon</li>
+</ul>
 
-<p>Eksempel på en figur laget med PlantUML.</p>
+<h3 id="eksempler">Eksempler</h3>
 
-<p><img src="test.svg" width="40%" /></p>
+<p>Det finnes eksempelinstanser for alle sentrale ressurser:</p>
+
+<ul>
+  <li>Pasient-1 (pasient)</li>
+  <li>Konsultasjon-1 (encounter/konsultasjon)</li>
+  <li>Blodtrykk-1 (observation/blodtrykksmaling)</li>
+</ul>
+
+<h3 id="bruk">Bruk</h3>
+
+<p>Eksemplene kan brukes som utgangspunkt for egne profiler og instanser i samme domene.</p>
 
 
 
@@ -261,7 +281,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/vidurehvikt">Vidar Ure</a>.  Package no.vidarure.fhir.lab-ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 9, 2026 13:04+0000">2026-11-09</span>
+          IG &#169; 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/vidurehvikt">Vidar Ure</a>.  Package no.vidarure.fhir.lab-ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 9, 2026 13:24+0000">2026-11-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

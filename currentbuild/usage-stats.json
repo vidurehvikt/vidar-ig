@@ -5,6 +5,12 @@
   "jurisdiction": "NO",
   "extensions": [],
   "profiles": {
+    "Encounter": [
+      {
+        "url": "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon",
+        "title": "Konsultasjon"
+      }
+    ],
     "Observation": [
       {
         "url": "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk",

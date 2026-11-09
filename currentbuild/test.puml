@@ -1,23 +1,42 @@
 @startuml
+title Vidar IG - Blodtrykksmaling
+footer MalPatient, MalEncounterConsultation, MalObservationBloodPressure
 
-' Tittel og bunntekst for diagrammet
-title Eksempel-diagram
-footer Undertekst A
-
-' Klassedefinisjoner med attributter
-class Folk {
-    -Navn : string
-    +Fødselsår : int
-}
-class Sykkel
-class Tastatur
-class Datamaskin {
-    +Svenskeknapp : boolean
+class "MalPatient\n(Patient)" as Patient {
+    identifier
+    name
 }
 
-' Relasjoner mellom klasser
-Folk <-- Datamaskin : bruker
-Folk <-- Sykkel : eier
-Tastatur --o Datamaskin : består av
+class "MalEncounterConsultation\n(Encounter)" as Encounter {
+    status = finished
+    class = ambulatory
+    period.start
+    period.end
+}
+
+class "MalObservationBloodPressure\n(Observation)" as Observation {
+    category = vital-signs
+    code = 85354-9
+    effectiveDateTime
+}
+
+class "Systolisk komponent" as Systolic {
+    code = 8480-6
+    valueQuantity.value
+    valueQuantity.unit = mmHg
+}
+
+class "Diastolisk komponent" as Diastolic {
+    code = 8462-4
+    valueQuantity.value
+    valueQuantity.unit = mmHg
+}
+
+Patient <-- Observation : subject
+Encounter <-- Observation : encounter
+Patient <-- Encounter : subject
+
+Observation *-- Systolic : component[systolisk]
+Observation *-- Diastolic : component[diastolisk]
 
 @enduml

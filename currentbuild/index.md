@@ -10,39 +10,50 @@
 | *Official URL*:https://example.org/fhir/vidarure/lab-ig/ImplementationGuide/no.vidarure.fhir.lab-ig | *Version*:0.1.0 |
 | Draft as of 2026-11-09 | *Computable Name*:LabIG |
 
-### Tittel
+### Vidar IG
 
-Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)
+Denne implementasjonsguiden viser et enkelt eksempel pa modellering av blodtrykksmaling i FHIR.
 
-### Mål
+### Mal
 
-Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.
+Formalet er a beskrive en liten, tydelig informasjonsmodell for:
 
-### Omfang
+* pasienten som malingen gjelder
+* konsultasjonen der malingen ble gjort
+* selve blodtrykksmalingen med systolisk og diastolisk verdi
 
-Denne implementasjonsguiden dekker følgende områder:
+### Innhold
 
-* Pasientadministrasjon
-* Kliniske observasjoner
-* Medisinsk historikk
-* Behandlingsplaner
-* Laboratorieresultater
+Guiden inneholder for tiden disse profilene:
 
-### Brukstilfeller
+* MalPatient
+* MalEncounterConsultation
+* MalObservationBloodPressure
 
-#### Pasientregistrering
+### Hva blodtrykksprofilen krever
 
-Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR `Patient`-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.
+Blodtrykksprofilen er en forenklet Observation-profil med:
 
-#### Kliniske observasjoner
+* kategori satt til vital signs
+* kode satt til LOINC blodtrykkspanel (85354-9)
+* to obligatoriske komponenter: 
+* systolisk blodtrykk (8480-6)
+* diastolisk blodtrykk (8462-4)
+ 
+* verdier i enheten mmHg
+* kobling til pasient og konsultasjon
 
-Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR `Observation`-ressursen.
+### Eksempler
 
-### Figur
+Det finnes eksempelinstanser for alle sentrale ressurser:
 
-Eksempel på en figur laget med PlantUML.
+* Pasient-1 (pasient)
+* Konsultasjon-1 (encounter/konsultasjon)
+* Blodtrykk-1 (observation/blodtrykksmaling)
 
-![](test.svg)
+### Bruk
+
+Eksemplene kan brukes som utgangspunkt for egne profiler og instanser i samme domene.
 
 
 
@@ -57,7 +68,7 @@ Eksempel på en figur laget med PlantUML.
   "name" : "LabIG",
   "title" : "Lab IG",
   "status" : "draft",
-  "date" : "2026-11-09T13:04:37+00:00",
+  "date" : "2026-11-09T13:24:03+00:00",
   "publisher" : "Vidar Ure",
   "contact" : [{
     "name" : "Vidar Ure",
@@ -414,6 +425,38 @@ Eksempel på en figur laget med PlantUML.
       "name" : "Blodtrykkmåling",
       "description" : "Enkel profil for blodtrykksmåling",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-mal-encounter-konsultasjon.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mal-encounter-konsultasjon"
+      },
+      "name" : "Konsultasjon",
+      "description" : "Enkel profil for konsultasjon der målinger gjennomfores",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-Konsultasjon-1.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Konsultasjon-1"
+      },
+      "name" : "Konsultasjon-1",
+      "description" : "Eksempel pa konsultasjon med blodtrykksmaling",
+      "exampleCanonical" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon"
     },
     {
       "extension" : [{

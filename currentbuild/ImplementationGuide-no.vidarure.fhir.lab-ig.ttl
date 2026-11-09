@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "LabIG"] ;
   fhir:ImplementationGuide.title [ fhir:value "Lab IG"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-11-09T13:04:37+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-11-09T13:24:03+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Vidar Ure"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -427,6 +427,37 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mal-encounter-konsultasjon" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Konsultasjon" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Enkel profil for konsultasjon der målinger gjennomfores" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://example.org/fhir/vidarure/lab-ig/Encounter/Konsultasjon-1> ;
+         fhir:Reference.reference [ fhir:value "Encounter/Konsultasjon-1" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Konsultasjon-1" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Eksempel pa konsultasjon med blodtrykksmaling" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon" ;
+         fhir:link <https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon>
+       ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
          fhir:link <https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient> ;
          fhir:Reference.reference [ fhir:value "StructureDefinition/mal-patient" ]
        ] ;
@@ -434,7 +465,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Informasjon om pasienten, basert på no-basis." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 3 ;
+       fhir:index 5 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;

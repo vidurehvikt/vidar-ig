@@ -1,14 +1,16 @@
 LabIG : Validation Results
 =========================================
 
-err = 1, warn = 17, info = 9, broken links = 0
+err = 1, warn = 17, info = 13, broken links = 0
 IG Publisher Version: 3.0.3
-Generated Mon Nov 09 13:05:52 UTC 2026. FHIR version 4.0.1 for no.vidarure.fhir.lab-ig#0.1.0 (canonical = https://example.org/fhir/vidarure/lab-ig)
+Generated Mon Nov 09 13:25:13 UTC 2026. FHIR version 4.0.1 for no.vidarure.fhir.lab-ig#0.1.0 (canonical = https://example.org/fhir/vidarure/lab-ig)
  Build Errors : 0 / 13 / 0
+ /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/Encounter-Konsultasjon-1 : 0 / 0 / 3
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/ImplementationGuide-no.vidarure.fhir.lab-ig : 0 / 2 / 3
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/Observation-Blodtrykk-1 : 0 / 1 / 2
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/Patient-Pasient-1 : 0 / 0 / 1
- /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/StructureDefinition-mal-observation-blodtrykk : 0 / 0 / 6
+ /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/StructureDefinition-mal-encounter-konsultasjon : 0 / 0 / 4
+ /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/StructureDefinition-mal-observation-blodtrykk : 0 / 0 / 5
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/StructureDefinition-mal-patient : 1 / 1 / 3
 </table>
 
@@ -28,6 +30,11 @@ WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-ta
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
 
+== fsh-generated/resources/Encounter-Konsultasjon-1.json ==
+INFORMATION: Encounter/Konsultasjon-1: Encounter.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB for language(s) 'no-NO'. The display is 'ambulatory' which is a valid display for the default language
+INFORMATION: Encounter/Konsultasjon-1: Encounter.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB for language(s) 'no-NO'. The display is 'ambulatory' which is a valid display for the default language
+
+
 == fsh-generated/resources/ImplementationGuide-no.vidarure.fhir.lab-ig.json ==
 INFORMATION: ImplementationGuide/no.vidarure.fhir.lab-ig: ImplementationGuide.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#NO for language(s) 'no-NO'. The display is 'Norway' which is a valid display for the default language
 WARNING: ImplementationGuide/no.vidarure.fhir.lab-ig: ImplementationGuide.dependsOn[2].uri: A definition could not be found for Canonical URL 'http://fhir.org/packages/hl7.fhir.no.basis/ImplementationGuide/hl7.fhir.no.basis'
@@ -42,10 +49,15 @@ WARNING: Observation/Blodtrykk-1: Observation: Best Practice Recommendation: In 
 == fsh-generated/resources/Patient-Pasient-1.json ==
 
 
+== fsh-generated/resources/StructureDefinition-mal-encounter-konsultasjon.json ==
+INFORMATION: StructureDefinition/mal-encounter-konsultasjon: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#NO for language(s) 'no-NO'. The display is 'Norway' which is a valid display for the default language
+INFORMATION: StructureDefinition/mal-encounter-konsultasjon: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+INFORMATION: Resource: The resource StructureDefinition/mal-encounter-konsultasjon could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
+
+
 == fsh-generated/resources/StructureDefinition-mal-observation-blodtrykk.json ==
 INFORMATION: StructureDefinition/mal-observation-blodtrykk: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#NO for language(s) 'no-NO'. The display is 'Norway' which is a valid display for the default language
-INFORMATION: StructureDefinition/mal-observation-blodtrykk: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
-INFORMATION: StructureDefinition/mal-observation-blodtrykk: StructureDefinition.differential.element[7].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/mal-observation-blodtrykk: StructureDefinition.differential.element[8].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/mal-observation-blodtrykk: StructureDefinition.snapshot.element[42].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: Resource: The resource StructureDefinition/mal-observation-blodtrykk could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)
 

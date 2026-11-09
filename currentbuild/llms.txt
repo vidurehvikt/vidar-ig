@@ -9,6 +9,7 @@
 
 ### Resource Profiles
 
+* [Konsultasjon](StructureDefinition-mal-encounter-konsultasjon.md)
 * [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
 * [Pasient](StructureDefinition-mal-patient.md)
 
@@ -18,5 +19,6 @@
 
 ### Examples
 
+* [Konsultasjon-1 (Encounter)](Encounter-Konsultasjon-1.md)
 * [Blodtrykk-1 (Observation)](Observation-Blodtrykk-1.md)
 * [Pasient-1 (Patient)](Patient-Pasient-1.md)

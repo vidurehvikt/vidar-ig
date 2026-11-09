@@ -10,7 +10,7 @@
   "name" : "LabIG",
   "title" : "Lab IG",
   "status" : "draft",
-  "date" : "2026-11-09T13:04:37+00:00",
+  "date" : "2026-11-09T13:24:03+00:00",
   "publisher" : "Vidar Ure",
   "contact" : [{
     "name" : "Vidar Ure",
@@ -359,6 +359,30 @@
       "name" : "Blodtrykkmåling",
       "description" : "Enkel profil for blodtrykksmåling",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/mal-encounter-konsultasjon"
+      },
+      "name" : "Konsultasjon",
+      "description" : "Enkel profil for konsultasjon der målinger gjennomfores",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Konsultasjon-1"
+      },
+      "name" : "Konsultasjon-1",
+      "description" : "Eksempel pa konsultasjon med blodtrykksmaling",
+      "exampleCanonical" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon"
     },
     {
       "extension" : [{

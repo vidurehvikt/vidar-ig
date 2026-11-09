@@ -6,6 +6,13 @@
   "name" : "LabIG"
 },
 {
+  "id" : "mal-encounter-konsultasjon",
+  "type" : "StructureDefinition",
+  "url" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon",
+  "version" : "0.1.0",
+  "name" : "MalEncounterConsultation"
+},
+{
   "id" : "mal-observation-blodtrykk",
   "type" : "StructureDefinition",
   "url" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk",

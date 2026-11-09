@@ -6,15 +6,15 @@
   "status" : "draft",
   "package-id" : "no.vidarure.fhir.lab-ig",
   "ig-ver" : "0.1.0",
-  "date" : "Mon, 09 Nov, 2026 13:04:37 +0000",
-  "dateISO8601" : "2026-11-09T13:04:37+00:00",
+  "date" : "Mon, 09 Nov, 2026 13:24:03 +0000",
+  "dateISO8601" : "2026-11-09T13:24:03+00:00",
   "errs" : 1,
   "warnings" : 17,
-  "hints" : 9,
+  "hints" : 13,
   "broken-links" : 0,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "6.0.0-snapshot1 (3)",
-  "maxMemory" : 784098184
+  "maxMemory" : 574301504
 }

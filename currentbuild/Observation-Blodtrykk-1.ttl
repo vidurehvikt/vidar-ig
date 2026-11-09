@@ -42,6 +42,10 @@
      fhir:link <https://example.org/fhir/vidarure/lab-ig/Patient/Pasient-1> ;
      fhir:Reference.reference [ fhir:value "Patient/Pasient-1" ]
   ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://example.org/fhir/vidarure/lab-ig/Encounter/Konsultasjon-1> ;
+     fhir:Reference.reference [ fhir:value "Encounter/Konsultasjon-1" ]
+  ] ;
   fhir:Observation.effectiveDateTime [ fhir:value "2026-11-09T08:30:00+01:00"^^xsd:dateTime] ;
   fhir:Observation.component [
      fhir:index 0 ;

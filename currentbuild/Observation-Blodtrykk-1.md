@@ -44,6 +44,9 @@ Diastolisk: 78 mmHg
   "subject" : {
     "reference" : "Patient/Pasient-1"
   },
+  "encounter" : {
+    "reference" : "Encounter/Konsultasjon-1"
+  },
   "effectiveDateTime" : "2026-11-09T08:30:00+01:00",
   "component" : [{
     "code" : {

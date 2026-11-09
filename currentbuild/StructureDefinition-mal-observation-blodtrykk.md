@@ -133,6 +133,16 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       }]
     },
     {
+      "id" : "Observation.encounter",
+      "path" : "Observation.encounter",
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-encounter-konsultasjon"]
+      }],
+      "mustSupport" : true
+    },
+    {
       "id" : "Observation.effective[x]",
       "path" : "Observation.effective[x]",
       "slicing" : {
