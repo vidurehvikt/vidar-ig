@@ -13,9 +13,7 @@ Description: "Enkel profil for blodtrykksmåling"
 * code = $loinc#85354-9 // Blood pressure panel with all children optional
 * value[x] 0..0
 * component 2..2 MS
-* component contains
-	systolisk 1..1 and
-	diastolisk 1..1
+* component contains systolisk 1..1 and diastolisk 1..1
 
 * component[systolisk].code = $loinc#8480-6 // Systolisk blodtrykk
 * component[systolisk].valueQuantity 1..1 MS
