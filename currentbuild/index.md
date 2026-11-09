@@ -55,6 +55,12 @@ Det finnes eksempelinstanser for alle sentrale ressurser:
 
 Eksemplene kan brukes som utgangspunkt for egne profiler og instanser i samme domene.
 
+### Diagram
+
+Oversikt over sammenhengen mellom pasient, konsultasjon og blodtrykksmaling:
+
+![](test.svg)
+
 
 
 ## Resource Content
@@ -68,7 +74,7 @@ Eksemplene kan brukes som utgangspunkt for egne profiler og instanser i samme do
   "name" : "LabIG",
   "title" : "Lab IG",
   "status" : "draft",
-  "date" : "2026-11-09T13:24:03+00:00",
+  "date" : "2026-11-09T14:11:00+00:00",
   "publisher" : "Vidar Ure",
   "contact" : [{
     "name" : "Vidar Ure",

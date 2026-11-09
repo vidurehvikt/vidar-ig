@@ -3,7 +3,7 @@ LabIG : Validation Results
 
 err = 1, warn = 17, info = 13, broken links = 0
 IG Publisher Version: 3.0.3
-Generated Mon Nov 09 13:25:13 UTC 2026. FHIR version 4.0.1 for no.vidarure.fhir.lab-ig#0.1.0 (canonical = https://example.org/fhir/vidarure/lab-ig)
+Generated Mon Nov 09 14:12:16 UTC 2026. FHIR version 4.0.1 for no.vidarure.fhir.lab-ig#0.1.0 (canonical = https://example.org/fhir/vidarure/lab-ig)
  Build Errors : 0 / 13 / 0
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/Encounter-Konsultasjon-1 : 0 / 0 / 3
  /__w/vidar-ig/vidar-ig/lab-ig/fsh-generated/resources/ImplementationGuide-no.vidarure.fhir.lab-ig : 0 / 2 / 3
