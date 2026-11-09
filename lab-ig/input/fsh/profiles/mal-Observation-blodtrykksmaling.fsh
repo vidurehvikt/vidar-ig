@@ -9,6 +9,8 @@ Description: "Enkel profil for blodtrykksmåling"
 
 * subject 1..1
 * subject only Reference(MalPatient) // Pasienten som blodtrykket er målt på
+* encounter 1..1 MS
+* encounter only Reference(MalEncounterConsultation) // Konsultasjonen der malingen ble gjort
 * effectiveDateTime 1..1 MS // Dato og tid for målingen
 * category 1..1 MS
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
@@ -55,6 +57,7 @@ Description: "Eksempel på blodtrykksmåling"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9
 * subject = Reference(Pasient-1)
+* encounter = Reference(Konsultasjon-1)
 * effectiveDateTime = "2026-11-09T08:30:00+01:00"
 * component[systolisk].code = $loinc#8480-6
 * component[systolisk].valueQuantity.value = 120
