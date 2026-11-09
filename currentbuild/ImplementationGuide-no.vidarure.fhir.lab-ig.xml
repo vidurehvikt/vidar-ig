@@ -11,7 +11,7 @@
   <name value="LabIG"/>
   <title value="Lab IG"/>
   <status value="draft"/>
-  <date value="2026-11-09T10:16:45+00:00"/>
+  <date value="2026-11-09T12:56:58+00:00"/>
   <publisher value="Vidar Ure"/>
   <contact>
     <name value="Vidar Ure"/>
@@ -258,13 +258,24 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Blodtrykk-1"/>
+      </reference>
+      <name value="Blodtrykk-1"/>
+      <description value="Eksempel på blodtrykksmåling"/>
+      <exampleCanonical value="https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/mal-observation-blodtrykk"/>
       </reference>
       <name value="Blodtrykkmåling"/>
-      <description value="Profil for vanlige blodtrykkmålinger"/>
+      <description value="Enkel profil for blodtrykksmåling"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

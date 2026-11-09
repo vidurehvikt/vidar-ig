@@ -57,7 +57,7 @@ Eksempel på en figur laget med PlantUML.
   "name" : "LabIG",
   "title" : "Lab IG",
   "status" : "draft",
-  "date" : "2026-11-09T10:16:45+00:00",
+  "date" : "2026-11-09T12:56:58+00:00",
   "publisher" : "Vidar Ure",
   "contact" : [{
     "name" : "Vidar Ure",
@@ -386,6 +386,22 @@ Eksempel på en figur laget med PlantUML.
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-Blodtrykk-1.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/Blodtrykk-1"
+      },
+      "name" : "Blodtrykk-1",
+      "description" : "Eksempel på blodtrykksmåling",
+      "exampleCanonical" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       },
       {
@@ -396,7 +412,7 @@ Eksempel på en figur laget med PlantUML.
         "reference" : "StructureDefinition/mal-observation-blodtrykk"
       },
       "name" : "Blodtrykkmåling",
-      "description" : "Profil for vanlige blodtrykkmålinger",
+      "description" : "Enkel profil for blodtrykksmåling",
       "exampleBoolean" : false
     },
     {

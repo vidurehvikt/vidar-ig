@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Blodtrykk-1"/>
+  <meta>
+    <profile value="https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation Blodtrykk-1</b></p><a name="Blodtrykk-1"> </a><a name="hcBlodtrykk-1"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mal-observation-blodtrykk.html">Blodtrykkmåling</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure panel with all children optional</span></p><p><b>subject</b>: <a href="Patient-Pasient-1.html">Vidar Hartveit Ure  Male, DoB: 1994-03-31 ( urn:oid:2.16.578.1.12.4.1.4.1#Foedselsnummer#31039453453)</a></p><p><b>effective</b>: 2026-11-09 08:30:00+0100</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 120(unit mm[Hg] from http://unitsofmeasure.org.)<span style="background: LightGoldenRodYellow"> (Details: unitsofmeasure.org.  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 78(unit mm[Hg] from http://unitsofmeasure.org.)<span style="background: LightGoldenRodYellow"> (Details: unitsofmeasure.org.  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85354-9"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Pasient-1"/>
+  </subject>
+  <effectiveDateTime value="2026-11-09T08:30:00+01:00"/>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="120"/>
+      <system value="http://unitsofmeasure.org."/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8462-4"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="78"/>
+      <system value="http://unitsofmeasure.org."/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+  </component>
+</Observation>

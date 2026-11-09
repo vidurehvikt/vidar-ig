@@ -18,4 +18,5 @@
 
 ### Examples
 
+* [Blodtrykk-1 (Observation)](Observation-Blodtrykk-1.md)
 * [Pasient-1 (Patient)](Patient-Pasient-1.md)

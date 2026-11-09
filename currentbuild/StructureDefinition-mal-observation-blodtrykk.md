@@ -12,11 +12,11 @@
 | Draft as of 2025-01-31 | *Computable Name*:MalObservationBloodPressure |
 
  
-Profil for vanlige blodtrykkmålinger 
+Enkel profil for blodtrykksmåling 
 
 **Usages:**
 
-* This Profile is not used by any profiles in this Specification
+* Examples for this Profile: [Observation/Blodtrykk-1](Observation-Blodtrykk-1.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/no.vidarure.fhir.lab-ig|current/StructureDefinition/StructureDefinition-mal-observation-blodtrykk.json)
 
@@ -50,7 +50,7 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
       "value" : "https://github.com/vidurehvikt"
     }]
   }],
-  "description" : "Profil for vanlige blodtrykkmålinger",
+  "description" : "Enkel profil for blodtrykksmåling",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -102,11 +102,17 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "mustSupport" : true
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85354-9"
+        }]
+      }
     },
     {
       "id" : "Observation.subject",
       "path" : "Observation.subject",
+      "min" : 1,
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient"]
@@ -122,13 +128,14 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
         }],
         "ordered" : false,
         "rules" : "open"
-      }
+      },
+      "min" : 1
     },
     {
       "id" : "Observation.effective[x]:effectiveDateTime",
       "path" : "Observation.effective[x]",
       "sliceName" : "effectiveDateTime",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "dateTime"
@@ -138,6 +145,42 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
     {
       "id" : "Observation.value[x]",
       "path" : "Observation.value[x]",
+      "max" : "0"
+    },
+    {
+      "id" : "Observation.component",
+      "path" : "Observation.component",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "code"
+        }],
+        "rules" : "open"
+      },
+      "min" : 2,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:systolisk",
+      "path" : "Observation.component",
+      "sliceName" : "systolisk",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:systolisk.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "8480-6"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:systolisk.value[x]",
+      "path" : "Observation.component.value[x]",
       "slicing" : {
         "discriminator" : [{
           "type" : "type",
@@ -145,18 +188,93 @@ Other representations of profile: [CSV](StructureDefinition-mal-observation-blod
         }],
         "ordered" : false,
         "rules" : "open"
-      }
+      },
+      "min" : 1
     },
     {
-      "id" : "Observation.value[x]:valueQuantity",
-      "path" : "Observation.value[x]",
+      "id" : "Observation.component:systolisk.value[x]:valueQuantity",
+      "path" : "Observation.component.value[x]",
       "sliceName" : "valueQuantity",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "type" : [{
         "code" : "Quantity"
       }],
       "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:systolisk.value[x]:valueQuantity.value",
+      "path" : "Observation.component.value[x].value",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:systolisk.value[x]:valueQuantity.system",
+      "path" : "Observation.component.value[x].system",
+      "patternUri" : "http://unitsofmeasure.org."
+    },
+    {
+      "id" : "Observation.component:systolisk.value[x]:valueQuantity.code",
+      "path" : "Observation.component.value[x].code",
+      "patternCode" : "mm[Hg]"
+    },
+    {
+      "id" : "Observation.component:diastolisk",
+      "path" : "Observation.component",
+      "sliceName" : "diastolisk",
+      "min" : 1,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:diastolisk.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "8462-4"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:diastolisk.value[x]",
+      "path" : "Observation.component.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Observation.component:diastolisk.value[x]:valueQuantity",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueQuantity",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }],
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:diastolisk.value[x]:valueQuantity.value",
+      "path" : "Observation.component.value[x].value",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:diastolisk.value[x]:valueQuantity.system",
+      "path" : "Observation.component.value[x].system",
+      "patternUri" : "http://unitsofmeasure.org."
+    },
+    {
+      "id" : "Observation.component:diastolisk.value[x]:valueQuantity.code",
+      "path" : "Observation.component.value[x].code",
+      "patternCode" : "mm[Hg]"
     }]
   }
 }

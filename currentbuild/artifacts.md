@@ -13,7 +13,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md) | Profil for vanlige blodtrykkmålinger |
+| [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md) | Enkel profil for blodtrykksmåling |
 | [Pasient](StructureDefinition-mal-patient.md) | Informasjon om pasienten, basert på no-basis. |
 
 ### Example: Example Instances 
@@ -22,5 +22,6 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Blodtrykk-1](Observation-Blodtrykk-1.md) | Eksempel på blodtrykksmåling |
 | [Pasient-1](Patient-Pasient-1.md) | Eksempel på norsk pasient med fødselsnummer, navn og kontaktinformasjon |
 
