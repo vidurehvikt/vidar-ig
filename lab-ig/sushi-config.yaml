@@ -6,8 +6,8 @@
 id: no.vidarure.fhir.lab-ig
 canonical: https://example.org/fhir/vidarure/lab-ig
 name: LabIG
-title: "Lab IG"
-description: Implementasjonsguide for å gjøre et eller annet
+title: "IG for blodtrykksutveksling"
+description: Standardisert registrering og utveksling av blodtrykksmaling mellom journalsystemer i primarhelsetjenesten.
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
