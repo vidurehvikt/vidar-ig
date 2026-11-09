@@ -37,3 +37,21 @@ Description: "Enkel profil for blodtrykksmåling"
 * component[diastolisk].valueQuantity.value 1..1 MS
 * component[diastolisk].valueQuantity.system = $ucum
 * component[diastolisk].valueQuantity.code = #mm[Hg]
+
+// Eksempel
+
+Instance: Blodtrykk-1
+InstanceOf: MalObservationBloodPressure
+Description: "Eksempel på blodtrykksmåling"
+* status = #final
+* code = $loinc#85354-9
+* subject = Reference(Pasient-1)
+* effectiveDateTime = "2026-11-09T08:30:00+01:00"
+* component[systolisk].code = $loinc#8480-6
+* component[systolisk].valueQuantity.value = 120
+* component[systolisk].valueQuantity.system = $ucum
+* component[systolisk].valueQuantity.code = #mm[Hg]
+* component[diastolisk].code = $loinc#8462-4
+* component[diastolisk].valueQuantity.value = 78
+* component[diastolisk].valueQuantity.system = $ucum
+* component[diastolisk].valueQuantity.code = #mm[Hg]
