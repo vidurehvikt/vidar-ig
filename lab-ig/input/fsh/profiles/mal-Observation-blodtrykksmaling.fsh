@@ -10,7 +10,7 @@ Description: "Enkel profil for blodtrykksmåling"
 * subject only Reference(MalPatient) // Pasienten som blodtrykket er målt på
 * effectiveDateTime 1..1 MS // Dato og tid for målingen
 * status 1..1
-* code = $LNC#85354-9 // Blood pressure panel with all children optional
+* code = $loinc#85354-9 // Blood pressure panel with all children optional
 * value[x] 0..0
 * component 2..2 MS
 * component contains
@@ -19,8 +19,8 @@ Description: "Enkel profil for blodtrykksmåling"
 
 * component[systolisk].code = $LNC#8480-6 // Systolisk blodtrykk
 * component[systolisk].valueQuantity 1..1 MS
-* component[systolisk].valueQuantity.code = $UCUM#mm[Hg]
+* component[systolisk].valueQuantity.code = $ucum#mm[Hg]
 
 * component[diastolisk].code = $LNC#8462-4 // Diastolisk blodtrykk
 * component[diastolisk].valueQuantity 1..1 MS
-* component[diastolisk].valueQuantity.code = $UCUM#mm[Hg]
+* component[diastolisk].valueQuantity.code = $ucum#mm[Hg]
