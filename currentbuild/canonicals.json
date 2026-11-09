@@ -1,0 +1,21 @@
+[{
+  "id" : "no.vidarure.fhir.lab-ig",
+  "type" : "ImplementationGuide",
+  "url" : "https://example.org/fhir/vidarure/lab-ig/ImplementationGuide/no.vidarure.fhir.lab-ig",
+  "version" : "0.1.0",
+  "name" : "LabIG"
+},
+{
+  "id" : "mal-observation-blodtrykk",
+  "type" : "StructureDefinition",
+  "url" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-observation-blodtrykk",
+  "version" : "0.1.0",
+  "name" : "MalObservationBloodPressure"
+},
+{
+  "id" : "mal-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient",
+  "version" : "0.1.0",
+  "name" : "MalPatient"
+}]

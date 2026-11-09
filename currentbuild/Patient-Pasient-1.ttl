@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://example.org/fhir/vidarure/lab-ig/Patient/Pasient-1> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "Pasient-1"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient" ;
+       fhir:index 0 ;
+       fhir:link <https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Vidar Hartveit Ure</strong></p><p>Fødselsnummer: 31039453453</p><p>Kjønn: Mann</p><p>Fødselsdato: 31. mars 1994</p><p>Telefon: +47 91 12 13 45 (mobil)</p><p>E-post: vidar.hartveit.ure@helse-vest-ikt.no</p><p>Adresse: Haukedalen 140, 5121 Ulset, Norge</p></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:oid:2.16.578.1.12.4.1.4.1" ] ;
+     fhir:Identifier.value [ fhir:value "31039453453" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.family [ fhir:value "Ure" ] ;
+     fhir:HumanName.given [
+       fhir:value "Vidar" ;
+       fhir:index 0
+     ], [
+       fhir:value "Hartveit" ;
+       fhir:index 1
+     ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+47 91 12 13 45" ] ;
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "vidar.hartveit.ure@helse-vest-ikt.no" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1994-03-31"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.line [
+       fhir:value "Haukedalen 140" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.city [ fhir:value "Ulset" ] ;
+     fhir:Address.postalCode [ fhir:value "5121" ] ;
+     fhir:Address.country [ fhir:value "NO" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://example.org/fhir/vidarure/lab-ig/Patient/Pasient-1.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

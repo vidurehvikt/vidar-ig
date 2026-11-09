@@ -1,0 +1,21 @@
+# no.vidarure.fhir.lab-ig#0.1.0: Lab IG
+
+## Pages
+
+* [Home](index.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### Resource Profiles
+
+* [Blodtrykkmåling](StructureDefinition-mal-observation-blodtrykk.md)
+* [Pasient](StructureDefinition-mal-patient.md)
+
+### ImplementationGuides
+
+* [Lab IG](index.md)
+
+### Examples
+
+* [Pasient-1 (Patient)](Patient-Pasient-1.md)

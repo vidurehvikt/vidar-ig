@@ -1,0 +1,37 @@
+{
+  "resourceType" : "Patient",
+  "id" : "Pasient-1",
+  "meta" : {
+    "profile" : ["https://example.org/fhir/vidarure/lab-ig/StructureDefinition/mal-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Vidar Hartveit Ure</strong></p><p>Fødselsnummer: 31039453453</p><p>Kjønn: Mann</p><p>Fødselsdato: 31. mars 1994</p><p>Telefon: +47 91 12 13 45 (mobil)</p><p>E-post: vidar.hartveit.ure@helse-vest-ikt.no</p><p>Adresse: Haukedalen 140, 5121 Ulset, Norge</p></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
+    "value" : "31039453453"
+  }],
+  "name" : [{
+    "family" : "Ure",
+    "given" : ["Vidar",
+    "Hartveit"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+47 91 12 13 45",
+    "use" : "mobile"
+  },
+  {
+    "system" : "email",
+    "value" : "vidar.hartveit.ure@helse-vest-ikt.no"
+  }],
+  "gender" : "male",
+  "birthDate" : "1994-03-31",
+  "address" : [{
+    "line" : ["Haukedalen 140"],
+    "city" : "Ulset",
+    "postalCode" : "5121",
+    "country" : "NO"
+  }]
+}
