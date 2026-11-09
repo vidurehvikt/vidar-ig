@@ -1,39 +1,35 @@
-### Blodtrykk i primarhelsetjenesten
+### Tittel
 
-Denne implementasjonsguiden definerer en standardisert måte a registrere og utveksle blodtrykksmalinger mellom to journalsystemer.
+Introduksjonstekst (husk at dette er en mal, og ALL tekst må endres - dette er kun et eksempel)
 
-### Formal
+### Mål
 
-Nar en pasient kommer til fastlegen for rutinekontroll, skal blodtrykket kunne deles med et annet helsesystem uten tap av mening. Denne guiden svarer pa hvordan begge systemer kan forsta samme måling likt.
+Målet med denne implementasjonsguiden er å gi en standardisert måte å representere og utveksle helsedata på ved hjelp av HL7 FHIR. Guiden beskriver hvordan ulike FHIR-profiler og ressurser kan brukes for å oppnå interoperabilitet mellom helsesystemer.
 
-### Brukstilfelle
+### Omfang
 
-1. Fastlege måler blodtrykk under konsultasjon.
-2. Journalsystem A lagrer malingen som en FHIR `Observation` i profilen `MalObservationBloodPressure`.
-3. Data sendes til journalsystem B.
-4. Journalsystem B validerer meldingen mot samme profil og tolker verdiene likt.
+Denne implementasjonsguiden dekker følgende områder:
 
-### Hva standardiseres
+- Pasientadministrasjon
+- Kliniske observasjoner
+- Medisinsk historikk
+- Behandlingsplaner
+- Laboratorieresultater
 
-- Felles kodeverk for observasjonen: LOINC `85354-9` (blodtrykkspanel).
-- Felles struktur for komponenter:
-	- Systolisk blodtrykk: LOINC `8480-6`
-	- Diastolisk blodtrykk: LOINC `8462-4`
-- Felles enhet: UCUM `mm[Hg]`
-- Felles minimumskrav: status, tidspunkt, pasientreferanse og begge komponenter.
+### Brukstilfeller
 
-### Hvorfor dette gir interoperabilitet
+#### Pasientregistrering
 
-Når begge systemer bruker samme profil, kodeverk og enheter, reduseres risikoen for:
+Denne guiden beskriver hvordan pasienter kan registreres i et helsesystem ved hjelp av FHIR `Patient`-ressursen. Eksempler inkluderer opprettelse, oppdatering og sletting av pasientdata.
 
-- Ulike tolkninger av hva som er systolisk og diastolisk verdi
-- Feil enhetsforstaelse
-- Ufullstendige blodtrykksmeldinger
+#### Kliniske observasjoner
 
-Resultatet er at samme blodtrykksmaling betyr det samme i avsender- og mottakersystem.
+Guiden viser hvordan kliniske observasjoner som blodtrykk, puls og temperatur kan representeres ved hjelp av FHIR `Observation`-ressursen.
 
-### Eksempel
+### Figur
 
-IG-en inneholder et eksempel (`Observation-BloodPressure-1`) med verdier 128/82 mm[Hg] knyttet til en eksempelpasient. Eksemplet kan brukes som mal ved implementasjon og testing.
+Eksempel på en figur laget med PlantUML.
+
+<img src="test.svg" width="40%" />
 
 
